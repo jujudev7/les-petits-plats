@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -6,13 +6,75 @@
     <title>Les Petits Plats par Julien Penna | Recettes de cuisine</title>
     <link href="dist/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <header class="relative h-[667px] w-full overflow-hidden">
+  <body class="font-manrope">
+    <header
+      class="relative flex w-full items-center justify-center overflow-hidden sm:h-[200px] md:h-[300px] lg:h-[400px] xl:h-[667px]"
+    >
+      <!-- Background -->
       <img
         src="/img/bg-les-petits-plats.png"
         alt="Background Image"
-        class="absolute top-[-214px] left-0 w-full h-auto object-cover"
+        class="absolute left-0 top-[-214px] h-auto w-full object-cover"
       />
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <!-- Logo -->
+      <img
+        src="/img/logo-les-petits-plats.png"
+        alt="logo Les Petits Plats"
+        class="absolute left-[5%] top-[6%] w-[15%]"
+      />
+      <div class="relative flex w-full flex-col items-center px-4">
+        <!-- Title -->
+        <h1
+          class="mb-4 w-[70%] px-4 text-center font-anton text-[16px] font-bold leading-tight tracking-tighter text-yellow sm:w-[75%] sm:text-[21px] md:w-[85%] md:text-[28px] lg:w-[85%] lg:text-[38px] xl:w-[65%] xl:text-[44px]"
+        >
+          CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN, SIMPLES ET
+          DÉLICIEUSES
+        </h1>
+        <form
+          action="/recherche"
+          method="get"
+          class="mt-4 flex h-[72px] w-3/4 items-center justify-end rounded-xl bg-white"
+        >
+          <label for="search" class="sr-only">Rechercher</label>
+          <input
+            type="search"
+            id="search"
+            name="query"
+            placeholder="Rechercher une recette, un ingrédient..."
+            class="text-grey peer flex w-full pl-10 focus-visible:outline-none"
+          />
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="group z-10 mr-3 opacity-0 transition-opacity duration-300 peer-focus:opacity-100"
+          >
+            <path
+              d="M15 15L8.5 8.5M8.5 8.5L2 2M8.5 8.5L15 2M8.5 8.5L2 15"
+              stroke="#7A7A7A"
+              stroke-width="2.16667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <button type="submit">
+            <img
+              src="/icons/glass.png"
+              alt=""
+              class="absolute z-10 ml-3 h-[51px] cursor-pointer pr-4 opacity-100 transition-opacity duration-300 hover:opacity-0"
+            />
+            <img
+              src="/icons/glass-hover.png"
+              alt=""
+              class="z-0 ml-3 h-[51px] pr-4"
+            />
+          </button>
+        </form>
+      </div>
     </header>
+    <!-- <main class="bg-lightGrey h-80"></main> -->
   </body>
 </html>
