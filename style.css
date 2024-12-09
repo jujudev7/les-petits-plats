@@ -21,6 +21,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -84,6 +85,12 @@ h1 {
   margin-bottom: 30px;
 }
 
+.content,
+.filters-zone,
+.labels {
+  border: 1px solid red; /* Pour visualiser les dimensions */
+}
+
 .searchbar {
   width: 66%;
   height: 72px;
@@ -141,12 +148,12 @@ input:focus-visible {
 /* FILTERS  */
 
 main {
-  height: 800px;
   background: #ededed;
 }
 
 .content {
-  margin: 0 104px;
+  width: calc(100% - 204px); /* Largeur totale moins les marges */
+  margin: 0 auto;
 }
 
 .filters-zone {
@@ -155,6 +162,8 @@ main {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  width: 100%; /* Occupe toute la largeur disponible de .content */
+  margin: 0;
 }
 
 .filters {
@@ -268,6 +277,7 @@ main {
   margin-top: 21px;
   margin-bottom: 43px;
   /* display: none; */
+  width: 100%;
 }
 
 .label-selected {
@@ -284,6 +294,96 @@ main {
   align-items: center;
   justify-content: space-between;
   width: max-content;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes de taille égale */
+  gap: 48px;
+  padding-bottom: 200px;
+}
+
+.card {
+  width: auto;
+  height: auto;
+  border-radius: 21px;
+  background: white;
+  position: relative;
+  padding-bottom: 61px;
+}
+
+.img-recipe {
+  width: 100%;
+  height: 253px;
+  object-fit: cover;
+  border-radius: 21px 21px 0 0;
+}
+
+.duration {
+  position: absolute;
+  top: 21px;
+  right: 22px;
+  background: #ffd15b;
+  font-family: Manrope;
+  font-size: 12px;
+  font-weight: 400;
+  color: #1b1b1b;
+  padding: 5px 15px;
+  border-radius: 14px;
+}
+
+.content-card {
+  padding: 0 25px;
+}
+
+h2 {
+  font-family: "Anton";
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 32px;
+  margin-bottom: 29px;
+}
+
+h3 {
+  font-family: "Manrope";
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a7a7a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.description {
+  margin-bottom: 32px;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-weight: 400;
+  color: #1b1b1b;
+}
+.ingredient {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes de taille égale */
+  gap: 21px;
+}
+
+.ingredient-name {
+  font-family: "Manrope";
+  font-size: 14px;
+  font-weight: bold;
+  color: #1b1b1b;
+}
+
+.quantity {
+  font-family: "Manrope";
+  font-size: 14px;
+  font-weight: 400;
+  color: #7a7a7a;
 }
 
 /* Animation pour le bouton lorsqu'une liste est active */
