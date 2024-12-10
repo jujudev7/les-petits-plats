@@ -85,11 +85,12 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* Pour visualiser les dimensions
 .content,
 .filters-zone,
 .labels {
-  border: 1px solid red; /* Pour visualiser les dimensions */
-}
+  border: 1px solid red; 
+} */
 
 .searchbar {
   width: 66%;
